@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- suite name="Suite" parallel="tests" thread-count="2"-->
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name = "com.framework.utility.Listener"/>
+		<listener class-name = "com.framework.utility.ReportCreation"/>
+	</listeners>
+
+	<parameter name="parameter1" value="parameter 1 value" />
+	<parameter name="parameter2" value="parameter 2 value" />
+
+	<test thread-count="5" name="Test1">
+
+		<parameter name="parameter1" value="5" />
+		<parameter name="parameter3" value="parameter 3 value" />
+		
+		<groups>
+			<run>
+				<include name="Regression"/>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="com.framework.tests2.Test2Class1Test" />
+			<class name="com.framework.tests2.Test2Class2Test" />
+			<class name="com.framework.tests1.Test1Class1Test" />
+			<class name="com.framework.tests2.Test2Class3Test" />
+		</classes>
+
+	</test>
+
+	<!-- test thread-count="5" name="Test2"> 
+		<classes> 
+			<class name="com.framework.tests1.Test1Class3Test"> 
+				<methods>
+					<exclude name="test1Class3Method1"/>
+				</methods>
+			</class>
+			<class name="com.framework.tests2.Test2Class2Test" />
+		</classes> 
+	</test-->
+
+</suite>
