@@ -1,4 +1,8 @@
 Edited something--2
 Chnages done in trail2 branch
 New changes done in trail2 branch
+<<<<<<< HEAD
 Another change on sample branch
+=======
+Another change done in trail2
+>>>>>>> trail2
